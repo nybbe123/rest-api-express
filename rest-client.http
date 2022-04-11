@@ -1,0 +1,36 @@
+GET http://localhost:3000/
+
+###
+
+GET http://localhost:3000/shoes
+
+###
+
+GET http://localhost:3000/shoes/1
+
+
+###
+
+POST http://localhost:3000/shoes
+Content-Type: application/json
+
+{
+    "brand": "Adidas",
+    "type": "Street",
+    "price": 109
+}
+
+###
+
+PUT http://localhost:3000/shoes/1
+Content-Type: application/json
+
+{
+    "brand": "Lorem",
+    "type": "Ipsum",
+    "price": 999
+}
+
+###
+
+DELETE http://localhost:3000/shoes/2

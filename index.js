@@ -2,16 +2,19 @@ const shoes = [
     {
         id: '1',
         brand: 'Vans',
+        type: 'Street',
         price: 99,
     },
     {
         id: '2',
         brand: 'New Balance',
+        type: 'Streetrunning',
         price: 99,
     },
     {
         id: '3',
         brand: 'Hoka One One',
+        type: 'Trailrunning',
         price: 99,
     }
 ]
@@ -42,11 +45,35 @@ app.get('/shoes/:id', (req, res) => {
 app.post('/shoes', (req, res) => {
     const newShoe  = {
         id: shoes.length + 1,
-        name: req.body.name,
+        brand: req.body.brand,
+        type: req.body.type,
         price: req.body.price,
     } 
     shoes.push(newShoe);
     res.send(newShoe);
+})
+
+app.put('/shoes/:id', (req, res) => {
+    const prod = shoes.find(shoe => shoe.id === req.params.id);
+    if(!prod) {
+        res.status(404).send('The product with the given ID was not found');
+    } else {
+        prod.brand = req.body.brand;
+        prod.type = req.body.type;
+        prod.price = req.body.price;
+        res.send(prod);
+    }
+})
+
+app.delete('/shoes/:id', (req, res) => {
+    const prod = shoes.find(shoe => shoe.id === req.params.id);
+    if(!prod) {
+        res.status(404).send('The product with the given ID was not found');
+    } else {
+        const index = shoes.indexOf(prod);
+        shoes.splice(index, 1);
+        res.send(prod);
+    }
 })
 
 app.listen(port, () => {
