@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/details.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="/">
+                <h1>RUN<span>NER</span></h1>
+            </a>
+            <a class="add-btn" href="#">ADD <span>+</span></a>
+        </div>
+    </header>
+    <main>
+        <div class="shoe-img" style="background-image: url('<%= shoe.image %>')"></div>
+        <div class="shoe-container">
+            <div class="shoe-box-top">
+                <p class="shoe-brand"><%= shoe.brand %></p>
+                <h3 class="shoe-title"><%= shoe.title %></h3>
+                <p class="shoe-bread">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat ullam aut ab beatae perspiciatis expedita quisquam incidunt non officia corrupti, consequuntur nesciunt fuga.</p>
+            </div>
+            <div class="shoe-box-bottom">
+                <p class="shoe-price-text">Price</p>
+                <p class="shoe-price"><%= shoe.price %>:-</p>
+            </div>
+            <div class="shoe-btn">
+                <a href="#">Edit</a>
+                <a href="">Delete</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

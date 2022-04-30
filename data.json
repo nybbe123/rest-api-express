@@ -1,20 +1,23 @@
 [
     {
         "id": "1",
-        "brand": "Vans",
-        "type": "Street",
-        "price": 99
+        "title": "Carbon x3",
+        "brand": "Hoka one one",
+        "price": 2399,
+        "image": "https://www.hoka.com/dw/image/v2/BCQW_PRD/on/demandware.static/-/Sites-HOKA-EMEA-master/default/dwd49d5d08/images/1123192-RYCM_1.jpg?sw=1110&sh=1141&sm=fit&sfrm=png&bgcolor=ffffff"
     },
     {
         "id": "2",
-        "brand": "Hoka",
-        "type": "Running",
-        "price": 99
+        "title": "Speedgoat 4",
+        "brand": "Hoka one one",
+        "price": 2199,
+        "image": "https://www.hoka.com/dw/image/v2/BCQW_PRD/on/demandware.static/-/Sites-HOKA-EMEA-master/default/dwecfd5ef9/images/1123157-DBTH_1.jpg?sw=1110&sh=1141&sm=fit&sfrm=png&bgcolor=ffffff"
     },
     {
         "id": "3",
-        "brand": "Adidas",
-        "type": "Gym",
-        "price": 99
+        "title": "Bondi 7",
+        "brand": "Hoka one one",
+        "price": 1799,
+        "image": "https://www.hoka.com/dw/image/v2/BCQW_PRD/on/demandware.static/-/Sites-HOKA-EMEA-master/default/dwc2a8ca4d/images/1110518-IBBG_1.jpg?sw=1110&sh=1141&sm=fit&sfrm=jpg&bgcolor=ffffff"
     }
 ]

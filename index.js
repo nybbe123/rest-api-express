@@ -23,6 +23,7 @@ const express = require('express');
 const app = express();
 const fs = require('fs');
 const uniqId = require('uniqid');
+const ejs = require('ejs');
 
 let jsonData = fs.readFileSync('data.json');
 let shoes = JSON.parse(jsonData);
@@ -30,21 +31,24 @@ let shoes = JSON.parse(jsonData);
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true })); 
 
 app.get('/', (req, res) => {
-    res.send('hello world!');
+    res.redirect('/shoes')
 })
 
 app.get('/shoes', (req, res) => {
-    res.send(shoes);
+    res.render('index', {shoes: shoes});
 })
 
 app.get('/shoes/:id', (req, res) => {
-    const prod = shoes.find(shoe => shoe.id === req.params.id);
-    if(!prod) {
+    const shoe = shoes.find(shoe => shoe.id == req.params.id);
+    if(!shoe) {
         res.status(404).send('The product with the given ID was not found');
     } else {
-        res.send(prod);
+        res.render('details', {shoe: shoe});
     }
 })
 
