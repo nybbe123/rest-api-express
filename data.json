@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "brand": "Vans",
+        "type": "Street",
+        "price": 99
+    },
+    {
+        "id": "2",
+        "brand": "Hoka",
+        "type": "Running",
+        "price": 99
+    },
+    {
+        "id": "3",
+        "brand": "Adidas",
+        "type": "Gym",
+        "price": 99
+    }
+]
