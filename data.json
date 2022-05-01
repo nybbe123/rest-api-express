@@ -19,5 +19,26 @@
         "brand": "Hoka one one",
         "price": 1799,
         "image": "https://www.hoka.com/dw/image/v2/BCQW_PRD/on/demandware.static/-/Sites-HOKA-EMEA-master/default/dwc2a8ca4d/images/1110518-IBBG_1.jpg?sw=1110&sh=1141&sm=fit&sfrm=jpg&bgcolor=ffffff"
+    },
+    {
+        "id": "4",
+        "title": "Ironman Mach 4",
+        "brand": "Hoka one one",
+        "price": 1899,
+        "image": "https://www.hoka.com/dw/image/v2/BCQW_PRD/on/demandware.static/-/Sites-HOKA-EMEA-master/default/dwb32b9f0b/images/1133592-BWHT_1.jpg?sw=1110&sh=1141&sm=fit&sfrm=png&bgcolor=ffffff"
+    },
+    {
+        "id": "5",
+        "title": "Speedgoat 5",
+        "brand": "Hoka one one",
+        "price": 2399,
+        "image": "https://www.hoka.com/dw/image/v2/BCQW_PRD/on/demandware.static/-/Sites-HOKA-EMEA-master/default/dw0e02d7de/images/1123157-FRYL_1.jpg?sw=1110&sh=1141&sm=fit&sfrm=png&bgcolor=ffffff"
+    },
+    {
+        "id": "6",
+        "title": "Mach supersonic",
+        "brand": "Hoka one one",
+        "price": 2199,
+        "image": "https://www.hoka.com/dw/image/v2/BCQW_PRD/on/demandware.static/-/Sites-HOKA-EMEA-master/default/dw6ab6b634/images/1130250-RYCM_1.jpg?sw=1110&sh=1141&sm=fit&sfrm=png&bgcolor=ffffff"
     }
 ]

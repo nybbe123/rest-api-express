@@ -10,7 +10,7 @@ body {
     background-color: #fafafa;
     font-family: 'Oswald', sans-serif;
     color: rgb(44, 44, 44);
-    padding: 1.5rem;
+    overflow-x: hidden;
 }
 
 header {
@@ -33,6 +33,7 @@ a {
 }
 
 .header {
+    position: relative;
     max-width: 1700px;
     width: 100%;
     display: flex;
@@ -63,10 +64,117 @@ h1 span {
 
 .add-btn span {
     position: absolute;
-    top: 44%;
+    top: 45%;
     right: 1.2rem;
     transform: translateY(-50%);
     font-size: 1.6rem;
+}
+
+.search-form {
+    position: fixed;
+    width: 100%;
+    padding: 1.5rem;
+    background-color: #FF7A45;
+    top: -4rem;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: 300ms;
+    z-index: 99;
+}
+
+.search-form input {
+    padding: .8rem;
+    border: none;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 4px;
+}
+
+.search-button {
+    border: none;
+    background-color: #0a0a0a;
+    padding: .5rem 2rem;
+    color: #fafafa;
+    border-radius: 4px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.main-top-container {
+    position: relative;
+    margin-top: -3.4rem;
+}
+
+.main-top-container img {
+    width: 100vw;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-top-text-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.main-top-text {
+    color: #FAFAFA;
+    width: 100%;
+    max-width: 1700px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.main-top-text p {
+    font-size: 1.3rem;
+}
+
+.main-top-text h2 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin: .5rem 0;
+}
+
+.main-top-text h3 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #FF7A45;
+}
+
+.product-text {
+    width: 100%;
+    max-width: 1700px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.product-text h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    
+}
+
+.devider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(51, 51, 51, 0.349);
 }
 
 main {
@@ -77,10 +185,12 @@ main {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    padding: 1.5rem;
 }
 
 .shoes {
     width: 100%;
+    max-width: 1700px;
     display: flex;
     flex-direction: column;
     justify-content: center;

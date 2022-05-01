@@ -11,26 +11,29 @@ GET http://localhost:3000/shoes/1
 
 ###
 
-POST http://localhost:3000/shoes
+POST http://localhost:3000/add
 Content-Type: application/json
 
-{
-    "brand": "Adidas",
-    "type": "Street",
-    "price": 109
-}
+    {
+        "id": "",
+        "title": "LOREM IPSUM",
+        "brand": "LOREM IPSUM",
+        "price": 99999999,
+        "image": "https://www.hoka.com/dw/image/v2/BCQW_PRD/on/demandware.static/-/Sites-HOKA-EMEA-master/default/dw0e02d7de/images/1123157-FRYL_1.jpg?sw=1110&sh=1141&sm=fit&sfrm=png&bgcolor=ffffff"
+    }
 
 ###
 
-PUT http://localhost:3000/shoes/1
+PUT http://localhost:3000/edit/1
 Content-Type: application/json
 
-{
-    "brand": "Lorem",
-    "type": "Ipsum",
-    "price": 999
-}
+    {
+        "title": "EDITED",
+        "brand": "EDITED",
+        "price": "0000000",
+        "image": "https://www.hoka.com/dw/image/v2/BCQW_PRD/on/demandware.static/-/Sites-HOKA-EMEA-master/default/dw0e02d7de/images/1123157-FRYL_1.jpg?sw=1110&sh=1141&sm=fit&sfrm=png&bgcolor=ffffff"
+    }
 
 ###
 
-DELETE http://localhost:3000/shoes/2
+DELETE http://localhost:3000/delete/6
