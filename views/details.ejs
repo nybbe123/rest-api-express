@@ -13,7 +13,7 @@
             <a href="/">
                 <h1>RUN<span>NER</span></h1>
             </a>
-            <a class="add-btn" href="#">ADD <span>+</span></a>
+            <a class="add-btn" href="/add">ADD <span>+</span></a>
         </div>
     </header>
     <main>
@@ -29,10 +29,26 @@
                 <p class="shoe-price"><%= shoe.price %>:-</p>
             </div>
             <div class="shoe-btn">
-                <a href="#">Edit</a>
-                <a href="">Delete</a>
+                <a href="/edit/<%= shoe.id %>">Edit</a>
+                <a class="delete-btn" data-doc="/delete/<%= shoe.id %>">Delete</a>
             </div>
         </div>
     </main>
+
+    <script>
+        const deleteBtn = document.querySelector("a.delete-btn");
+  
+        deleteBtn.addEventListener("click", (e) => {
+          const endpoint = `${deleteBtn.dataset.doc}`;
+  
+          fetch(endpoint, {
+            method: "DELETE",
+          })
+            .then((response) => (window.location.href = '/shoes'))
+            .catch((err) => {
+              console.log(err);
+            });
+        });
+      </script>
 </body>
 </html>

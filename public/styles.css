@@ -28,6 +28,10 @@ header {
     background-color: #0a0a0a;
 }
 
+a {
+    text-decoration: none;
+}
+
 .header {
     max-width: 1700px;
     width: 100%;

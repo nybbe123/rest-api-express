@@ -1,24 +1,3 @@
-// const shoes = [
-//     {
-//         id: '1',
-//         brand: 'Vans',
-//         type: 'Street',
-//         price: 99,
-//     },
-//     {
-//         id: '2',
-//         brand: 'New Balance',
-//         type: 'Streetrunning',
-//         price: 99,
-//     },
-//     {
-//         id: '3',
-//         brand: 'Hoka One One',
-//         type: 'Trailrunning',
-//         price: 99,
-//     }
-// ]
-
 const express = require('express');
 const app = express();
 const fs = require('fs');
@@ -43,6 +22,22 @@ app.get('/shoes', (req, res) => {
     res.render('index', {shoes: shoes});
 })
 
+app.get('/add', (req, res) => {
+    res.render('add');
+})
+
+app.post('/add', (req, res) => {
+    const newShoe  = {
+        id: uniqId(),
+        title: req.body.title,
+        brand: req.body.brand,
+        price: req.body.price,
+        image: req.body.image
+    } 
+    shoes.push(newShoe);
+    res.redirect('shoes');
+})
+
 app.get('/shoes/:id', (req, res) => {
     const shoe = shoes.find(shoe => shoe.id == req.params.id);
     if(!shoe) {
@@ -52,37 +47,36 @@ app.get('/shoes/:id', (req, res) => {
     }
 })
 
-app.post('/shoes', (req, res) => {
-    const newShoe  = {
-        id: uniqId(),
-        brand: req.body.brand,
-        type: req.body.type,
-        price: req.body.price,
-    } 
-    shoes.push(newShoe);
-    res.send(newShoe);
-})
-
-app.put('/shoes/:id', (req, res) => {
-    const prod = shoes.find(shoe => shoe.id === req.params.id);
-    if(!prod) {
+app.get('/edit/:id', (req, res) => {
+    const shoe = shoes.find(shoe => shoe.id == req.params.id);
+    if(!shoe) {
         res.status(404).send('The product with the given ID was not found');
     } else {
-        prod.brand = req.body.brand;
-        prod.type = req.body.type;
-        prod.price = req.body.price;
-        res.send(prod);
+        res.render('edit', {shoe: shoe});
     }
 })
 
-app.delete('/shoes/:id', (req, res) => {
-    const prod = shoes.find(shoe => shoe.id === req.params.id);
-    if(!prod) {
+app.put('/edit/:id', (req, res) => {
+    const shoe = shoes.find(shoe => shoe.id == req.params.id);
+    if(!shoe) {
         res.status(404).send('The product with the given ID was not found');
     } else {
-        const index = shoes.indexOf(prod);
+        shoe.title = req.body.title;
+        shoe.brand = req.body.brand;
+        shoe.price = req.body.price;
+        shoe.image = req.body.image;
+        res.redirect('shoes')
+    }
+})
+
+app.delete('/delete/:id', (req, res) => {
+    const shoe = shoes.find(shoe => shoe.id == req.params.id);
+    if(!shoe) {
+        res.status(404).send('The product with the given ID was not found');
+    } else {
+        const index = shoes.indexOf(shoe);
         shoes.splice(index, 1);
-        res.send(prod);
+        res.redirect('shoes')
     }
 })
 
