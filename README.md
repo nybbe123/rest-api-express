@@ -21,3 +21,10 @@ Laborationen gick ut på att skapa ett enklare REST-API med NodeJs och Express. 
 - [x] Git & GitHub har använts.
 - [x] Projektmappen innehåller en README.md fil.
 - [x] Uppgiften lämnas in i tid.
+
+# VG: 
+- [x] Alla punkter för godkänt är uppfyllda
+- [x] All data skall vara sparad i en JSON-fil istället för i serverfilen
+- [x] Datan i JSON-filen skall uppdateras då något läggs till, uppdateras eller tas bort
+- [x] Ett klient-gränssnitt skall byggas för att anropa API:ets alla olika endpoints och presentera datan, redigeringsformulär skall fyllas i med befintlig information.
+- [x] Ytterligare en GET endpoint skall läggas till där det går att hämta ett specifikt objekt
