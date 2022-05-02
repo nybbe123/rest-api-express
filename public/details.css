@@ -147,6 +147,10 @@ main {
     border-radius: 4px;
 }
 
+.shoe-btn a:hover {
+    cursor: pointer;
+}
+
 @media (min-width: 1400px) {
     body {
         display: flex;

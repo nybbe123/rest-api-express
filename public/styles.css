@@ -70,50 +70,16 @@ h1 span {
     font-size: 1.6rem;
 }
 
-.search-form {
-    position: fixed;
-    width: 100%;
-    padding: 1.5rem;
-    background-color: #FF7A45;
-    top: -4rem;
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    transition: 300ms;
-    z-index: 99;
-}
-
-.search-form input {
-    padding: .8rem;
-    border: none;
-    width: 100%;
-    max-width: 450px;
-    border-radius: 4px;
-}
-
-.search-button {
-    border: none;
-    background-color: #0a0a0a;
-    padding: .5rem 2rem;
-    color: #fafafa;
-    border-radius: 4px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 1rem;
-    text-transform: uppercase;
-}
-
 .main-top-container {
     position: relative;
-    margin-top: -3.4rem;
+    margin-top: -2.5rem;
 }
 
 .main-top-container img {
     width: 100vw;
-    height: auto;
+    height: 350px;
     object-fit: cover;
-    object-position: center;
+    object-position: 82% center;
     background-repeat: no-repeat;
 }
 
@@ -139,18 +105,18 @@ h1 span {
 }
 
 .main-top-text p {
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .main-top-text h2 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
     line-height: 1.1;
     margin: .5rem 0;
 }
 
 .main-top-text h3 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
     color: #FF7A45;
 }
@@ -185,7 +151,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
 .shoes {
@@ -267,12 +233,35 @@ main {
 }
 
 @media (min-width: 600px) {
-    main {
-        margin-top: 7rem;
-    }
-
     .shoes {
     flex-direction: row;
     flex-wrap: wrap;
 }
+}
+
+@media (min-width: 1175px) {
+    .main-top-container img {
+        width: 100vw;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .main-top-text p {
+        font-size: 1rem;
+    }
+    
+    .main-top-text h2 {
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        line-height: 1.1;
+        margin: .5rem 0;
+    }
+    
+    .main-top-text h3 {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        color: #FF7A45;
+    }
 }
