@@ -80,6 +80,10 @@ app.delete('/delete/:id', (req, res) => {
     }
 })
 
+app.use((req, res) => {
+    res.status(404).render('404');
+})
+
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
 })
